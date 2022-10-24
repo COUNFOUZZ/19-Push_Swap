@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:04:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/24 16:07:15 by aabda            ###   ########.fr       */
+/*   Updated: 2022/10/24 18:31:20 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_data
 
 t_data	*ft_add_node(t_data *node, int val);
 size_t	ft_strlen(const char *s);
+char	**ft_split(char const *s, char c);
 int		ft_atoi(const char *str, t_data *node);
 int		ft_is_double(t_data *node);
 void	ft_error(t_data *node, int res, const char *error);
