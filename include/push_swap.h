@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:04:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/24 14:57:23 by aabda            ###   ########.fr       */
+/*   Updated: 2022/10/24 16:07:15 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@
 
 
 # define ERR_ARG "Invalide number of argument !\n"
-# define BAD_ARG "You can only use number in argument !\n"
-# define DOUBLE_ARG "You can't have the same number in argument !\n"
+# define ERROR "Error\n"
 
 typedef struct s_data
 {
