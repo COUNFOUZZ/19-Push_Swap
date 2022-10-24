@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 21:14:22 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/24 14:44:51 by aabda            ###   ########.fr       */
+/*   Updated: 2022/10/24 15:48:09 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_atoi(const char *str, t_data	*node)
 	long int	result;
 
 	if (!str || *str < '0' || *str > '9')
-		ft_error(node, -1, BAD_ARG);
+		ft_error(node, -1, ERROR);
 	i = 0;
 	sign = 1;
 	result = 0;
