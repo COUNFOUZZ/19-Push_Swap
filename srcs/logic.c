@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   logic.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 23:03:56 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/24 19:12:34 by aabda            ###   ########.fr       */
+/*   Created: 2022/10/24 18:50:32 by aabda             #+#    #+#             */
+/*   Updated: 2022/10/24 18:58:11 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	main(int argc, const char **argv)
+void	ft_if_is_two_args(int argc, const char **argv, t_data *stack)
 {
-	t_data	*stack_a;
+	int		i;
 	char	**tab;
 
-	stack_a = NULL;
-	if (argc < 2)
-		return (-1);
-	else if (argc == 2)
-		ft_if_is_two_args(argc, argv, stack_a);
-	else
+	tab = NULL;
+	if (argc == 2)
 	{
-		while (--argc >= 1)
-			stack_a = ft_add_node(stack_a, ft_atoi(argv[argc], stack_a));
-		ft_error(stack_a, ft_is_double(stack_a), ERROR);
-		ft_print_list(stack_a);
+		i = 0;
+		tab = ft_split(argv[1], ' ');
+		while (tab[i])
+			i++;
+		while (tab[--i])
+			stack = ft_add_node(stack, ft_atoi(tab[i], stack));
+		ft_error(stack, ft_is_double(stack), ERROR);
+		ft_print_list(stack);
 	}
-	return (0);
 }
