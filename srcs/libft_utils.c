@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:33:56 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/26 10:54:26 by aabda            ###   ########.fr       */
+/*   Updated: 2022/10/29 16:24:49 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,9 @@ int	ft_atoi(const char *str, t_data	*node)
 			ft_error(node, -1, ERROR);
 	}
 	return (result * sign);
+}
+
+void	ft_putstr_fd(const char *s, int fd)
+{
+	write(fd, s, ft_strlen(s));
 }
