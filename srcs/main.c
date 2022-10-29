@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:03:56 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/24 19:12:34 by aabda            ###   ########.fr       */
+/*   Updated: 2022/10/29 17:50:20 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	main(int argc, const char **argv)
 		while (--argc >= 1)
 			stack_a = ft_add_node(stack_a, ft_atoi(argv[argc], stack_a));
 		ft_error(stack_a, ft_is_double(stack_a), ERROR);
+		ft_print_list(stack_a);
+		ft_swap("[SA]\n", &stack_a);
 		ft_print_list(stack_a);
 	}
 	return (0);
