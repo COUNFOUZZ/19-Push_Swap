@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:04:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/29 16:23:33 by aabda            ###   ########.fr       */
+/*   Updated: 2022/10/29 17:49:49 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ void	ft_putstr_fd(const char *s, int fd);
 void	ft_error(t_data *node, int res, const char *error);
 void	ft_print_list(t_data *node);
 void	ft_if_is_two_args(int argc, const char **argv, t_data *stack);
+void	ft_swap(const char *s, t_data **stack);
+void	do_ss(t_data **stack_a, t_data **stack_b);
 
 #endif
