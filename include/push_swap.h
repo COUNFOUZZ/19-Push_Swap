@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:04:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/30 21:11:47 by aabda            ###   ########.fr       */
+/*   Updated: 2022/10/30 23:16:49 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,15 @@ int		ft_is_double(t_data *node);
 
 /*		FT_SWAP.C		*/
 void	ft_swap(const char *s, t_data **stack);
-void	do_ss(t_data **stack_a, t_data **stack_b);
+void	ss(t_data **stack_a, t_data **stack_b);
 
 /*		FT_ROTATE.C		*/
 void	ft_rotate(const char *s, t_data **stack);
-void	do_rr(t_data **stack_a, t_data **stack_b);
+void	rr(t_data **stack_a, t_data **stack_b);
 
 /*		FT_REVERSE_ROTATE.C		*/
 void	ft_reverse_rotate(const char *s, t_data **stack);
-void	do_rr(t_data **stack_a, t_data **stack_b);
+void	rrr(t_data **stack_a, t_data **stack_b);
 
 /*		LOGIC.C		*/
 void	ft_if_is_two_args(int argc, const char **argv, t_data *stack);
