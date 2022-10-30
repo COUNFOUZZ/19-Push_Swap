@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:03:56 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/30 20:47:25 by aabda            ###   ########.fr       */
+/*   Updated: 2022/10/30 21:02:01 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	main(int argc, const char **argv)
 		ft_swap("[SA]\n", &stack_a);
 		ft_print_list(stack_a);
 		ft_rotate("[RA]\n", &stack_a);
+		ft_print_list(stack_a);
+		ft_reverse_rotate("[RRA]\n", &stack_a);
 		ft_print_list(stack_a);
 	}
 	return (0);
