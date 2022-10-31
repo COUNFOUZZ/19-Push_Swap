@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:04:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/30 23:16:49 by aabda            ###   ########.fr       */
+/*   Updated: 2022/10/31 10:18:44 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
-# include <stdio.h>	//	A DELETE
+# include <stdio.h>	//	Need to be delete !!!
 
 # define ERR_ARG "Invalide number of argument !\n"
 # define ERROR "Error\n"
@@ -35,8 +35,13 @@ void	ft_putstr_fd(const char *s, int fd);
 
 /*		NODE.C		*/
 t_data	*ft_add_node(t_data *node, int val);
-void	ft_print_list(t_data *node);
 int		ft_is_double(t_data *node);
+void	ft_print_list(t_data *node);							// Some printf here (need to be delete)
+void	ft_print_two_stack(t_data *stack_a, t_data *stack_b);	// Some printf here (need to be delete)
+
+/*		FT_PUSH.C		*/
+void	pa(t_data **stack_a, t_data **stack_b);
+void	pb(t_data **stack_a, t_data **stack_b);
 
 /*		FT_SWAP.C		*/
 void	ft_swap(const char *s, t_data **stack);
