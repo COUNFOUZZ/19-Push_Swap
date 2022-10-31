@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:04:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/31 10:18:44 by aabda            ###   ########.fr       */
+/*   Updated: 2022/10/31 12:06:12 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_data
 	struct s_data	*next;
 }	t_data;
 
-/*		LIBFT		*/
+/*		LIBFT_UTILS.c		*/
 size_t	ft_strlen(const char *s);
 int		ft_atoi(const char *str, t_data *node);
 char	**ft_split(char const *s, char c);
