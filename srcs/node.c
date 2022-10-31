@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 11:34:10 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/24 14:53:48 by aabda            ###   ########.fr       */
+/*   Updated: 2022/10/31 11:47:58 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,31 @@ void	ft_print_list(t_data *node)
 {
 	while (node)
 	{
-		printf("[%p][%d]\n", node, node->value);	// PRINTF
+		printf("[%p][%d]\n", node, node->value);
 		node = node->next;
 		if (!node)
-			printf("[%p]NULL\n", node);				// PRINTF
+			printf("[%p]NULL\n", node);
 	}
+}
+
+void	ft_print_two_stack(t_data *stack_a, t_data *stack_b)
+{
+	printf("[STACK_A]\n");
+	while (stack_a)
+	{
+		printf("[%p][%d]\n", stack_a, stack_a->value);
+		stack_a = stack_a->next;
+	}
+	if (!stack_a)
+		printf("[%p]NULL\n", stack_a);
+	printf("[STACK_B]\n");
+	while (stack_b)
+	{
+		printf("[%p][%d]\n", stack_b, stack_b->value);
+		stack_b = stack_b->next;
+	}
+	if (!stack_b)
+		printf("[%p]NULL\n", stack_b);
 }
 
 int	ft_is_double(t_data *node)
