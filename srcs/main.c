@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:03:56 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/31 11:54:45 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/02 10:45:03 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int	main(int argc, const char **argv)
 {
 	t_data	*stack_a;
 	t_data	*stack_b;
-	char	**tab;
 
 	stack_a = NULL;
 	stack_b = NULL;
