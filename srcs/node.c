@@ -38,22 +38,20 @@ void	ft_print_list(t_data *node)
 
 void	ft_print_two_stack(t_data *stack_a, t_data *stack_b)
 {
-	printf("[STACK_A]\n");
+	printf(GREEN "[STACK_A]\n");
 	while (stack_a)
 	{
 		printf("[%p][%d]\n", stack_a, stack_a->value);
 		stack_a = stack_a->next;
 	}
 	if (!stack_a)
-		printf("[%p]NULL\n", stack_a);
-	printf("[STACK_B]\n");
+		printf(RED "[%p]NULL\n" NORMAL, stack_a);
+	printf(YELLOW "[STACK_B]\n");
 	while (stack_b)
 	{
 		printf("[%p][%d]\n", stack_b, stack_b->value);
 		stack_b = stack_b->next;
 	}
 	if (!stack_b)
-		printf("[%p]NULL\n", stack_b);
-}
 		printf(RED "[%p]NULL\n" NORMAL, stack_b);
 }
