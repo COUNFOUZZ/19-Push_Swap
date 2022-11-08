@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 11:34:10 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/31 11:47:58 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/08 13:32:26 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,24 +55,5 @@ void	ft_print_two_stack(t_data *stack_a, t_data *stack_b)
 	if (!stack_b)
 		printf("[%p]NULL\n", stack_b);
 }
-
-int	ft_is_double(t_data *node)
-{
-	t_data	*tmp;
-
-	if (node)
-	{
-		while (node->next)
-		{
-			tmp = node->next;
-			while (tmp)
-			{
-				if (node->value == tmp->value)
-					return (-1);
-				tmp = tmp->next;
-			}
-			node = node->next;
-		}
-	}
-	return (0);
+		printf(RED "[%p]NULL\n" NORMAL, stack_b);
 }

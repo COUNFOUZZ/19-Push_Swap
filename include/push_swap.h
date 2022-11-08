@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:04:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/07 14:16:50 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/08 13:40:38 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,17 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
-# include <stdio.h>	//	Need to be delete !!!
+# include <stdio.h>			//	Need to be delete !!!
+
+# define BLACK "\x1b[30m"	//	Need to be delete !!!
+# define RED "\x1b[31m"		//	Need to be delete !!!
+# define GREEN "\x1b[32m"	//	Need to be delete !!!
+# define YELLOW "\x1b[33m"	//	Need to be delete !!!
+# define BLUE "\x1b[34m"	//	Need to be delete !!!
+# define PURPLE "\x1b[35m"	//	Need to be delete !!!
+# define CYAN "\x1b[36m"	//	Need to be delete !!!
+# define WHITE "\x1b[37m"	//	Need to be delete !!!
+# define NORMAL "\x1b[m"	//	Need to be delete !!!
 
 # define ERR_ARG "Invalide number of argument !\n"
 # define ERROR "Error\n"
@@ -35,9 +45,12 @@ void	ft_putstr_fd(const char *s, int fd);
 
 /*		NODE.C		*/
 t_data	*ft_add_node(t_data *node, int val);
-int		ft_is_double(t_data *node);
 void	ft_print_list(t_data *node);							// Some printf here (need to be delete)
 void	ft_print_two_stack(t_data *stack_a, t_data *stack_b);	// Some printf here (need to be delete)
+
+/*		FT_CHECK.C		*/
+int		ft_is_double(t_data *node);
+int		ft_is_sorted(t_data **stack_a);
 
 /*		FT_PUSH.C		*/
 void	pa(t_data **stack_a, t_data **stack_b);
