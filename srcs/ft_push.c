@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 23:10:54 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/02 10:43:04 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/07 16:22:28 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	pa(t_data **stack_a, t_data **stack_b)
 	*stack_b = (*stack_b)->next;
 	first_b->next = *stack_a;
 	*stack_a = first_b;
-	ft_putstr_fd("[PA]\n", 1);
+	ft_putstr_fd("pa\n", 1);
 }
 
 void	pb(t_data **stack_a, t_data **stack_b)
@@ -35,5 +35,5 @@ void	pb(t_data **stack_a, t_data **stack_b)
 	*stack_a = (*stack_a)->next;
 	first_a->next = *stack_b;
 	*stack_b = first_a;
-	ft_putstr_fd("[PB]\n", 1);
+	ft_putstr_fd("pb\n", 1);
 }

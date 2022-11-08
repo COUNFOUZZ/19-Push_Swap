@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:15:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/07 14:17:35 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/08 13:41:06 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,18 @@ void	ft_three_node(t_data **stack_a)
 		return ;
 	else if (f->value < s->value && f->value < t->value && s->value > t->value)
 	{
-		ft_reverse_rotate("[RRA]\n", stack_a);
-		ft_swap("[SA]\n", stack_a);
+		ft_reverse_rotate("rra\n", stack_a);
+		ft_swap("sa\n", stack_a);
 	}
 	else if (f->value > s->value && f->value < t->value && s->value < t->value)
-		ft_swap("[SA]\n", stack_a);
+		ft_swap("sa\n", stack_a);
 	else if (f->value < s->value && f->value > t->value && s->value > t->value)
-		ft_reverse_rotate("[RRA]\n", stack_a);
+		ft_reverse_rotate("rra\n", stack_a);
 	else if (f->value > s->value && f->value > t->value && s->value < t->value)
-		ft_rotate("[RA]\n", stack_a);
+		ft_rotate("ra\n", stack_a);
 	else if (f->value > s->value && f->value > t->value && s->value > t->value)
 	{
-		ft_rotate("[RA]\n", stack_a);
-		ft_swap("[SA]\n", stack_a);
+		ft_rotate("ra\n", stack_a);
+		ft_swap("sa\n", stack_a);
 	}
 }
