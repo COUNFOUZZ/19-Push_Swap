@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 20:52:20 by aabda             #+#    #+#             */
-/*   Updated: 2022/10/31 10:46:44 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/09 03:13:50 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_reverse_rotate(const char *s, t_data **stack)
 
 void	rrr(t_data **stack_a, t_data **stack_b)
 {
-	ft_reverse_rotate(NULL, &*stack_a);
-	ft_reverse_rotate(NULL, &*stack_b);
-	ft_putstr_fd("[RRR]\n", 1);
+	ft_reverse_rotate(NULL, stack_a);
+	ft_reverse_rotate(NULL, stack_b);
+	ft_putstr_fd("rrr\n", 1);
 }

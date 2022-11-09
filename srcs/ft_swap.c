@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:16:35 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/04 16:08:57 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/09 03:13:34 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ void	ss(t_data **stack_a, t_data **stack_b)
 {
 	ft_swap(NULL, stack_a);
 	ft_swap(NULL, stack_b);
-	ft_putstr_fd("[SS]\n", 1);
+	ft_putstr_fd("ss\n", 1);
 }
