@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 11:34:10 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/08 13:32:26 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/09 02:01:03 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,33 @@ t_data	*ft_add_node(t_data *node, int val)
 	return (tmp);
 }
 
+void	ft_fill_index(t_data **stack_a)
+{
+	t_data	*first;
+	t_data	*cp_a;
+	int		i;
+
+	first = *stack_a;
+	cp_a = *stack_a;
+	if (*stack_a)
+	{
+		while (*stack_a)
+		{
+			cp_a = first;
+			i = 0;
+			while (cp_a->next)
+			{
+				if ((*stack_a)->value > cp_a->value)
+					i++;
+				(*stack_a)->index = i;
+				cp_a = cp_a->next;
+			}
+			*stack_a = (*stack_a)->next;
+		}
+	}
+	*stack_a = first;
+}
+
 void	ft_print_list(t_data *node)
 {
 	while (node)
@@ -41,7 +68,7 @@ void	ft_print_two_stack(t_data *stack_a, t_data *stack_b)
 	printf(GREEN "[STACK_A]\n");
 	while (stack_a)
 	{
-		printf("[%p][%d]\n", stack_a, stack_a->value);
+		printf("[%p][%d][%d]\n", stack_a, stack_a->value, stack_a->index);
 		stack_a = stack_a->next;
 	}
 	if (!stack_a)

@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:04:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/08 13:40:38 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/09 02:01:56 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@
 typedef struct s_data
 {
 	int				value;
+	int				index;
 	struct s_data	*next;
 }	t_data;
 
@@ -45,6 +46,7 @@ void	ft_putstr_fd(const char *s, int fd);
 
 /*		NODE.C		*/
 t_data	*ft_add_node(t_data *node, int val);
+void	ft_fill_index(t_data **stack_a);
 void	ft_print_list(t_data *node);							// Some printf here (need to be delete)
 void	ft_print_two_stack(t_data *stack_a, t_data *stack_b);	// Some printf here (need to be delete)
 
