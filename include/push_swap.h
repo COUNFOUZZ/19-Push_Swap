@@ -52,7 +52,7 @@ void	ft_print_two_stack(t_data *stack_a, t_data *stack_b);	// Some printf here (
 
 /*		FT_CHECK.C		*/
 int		ft_is_double(t_data *node);
-int		ft_is_sorted(t_data **stack_a);
+int		ft_is_sorted(t_data *stack_a);
 
 /*		FT_PUSH.C		*/
 void	pa(t_data **stack_a, t_data **stack_b);
