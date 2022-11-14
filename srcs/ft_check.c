@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:32:08 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/08 13:32:47 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/08 17:18:58 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,22 @@ int	ft_is_double(t_data *node)
 	return (0);
 }
 
-int	ft_is_sorted(t_data **stack_a)
+int	ft_is_sorted(t_data *stack_a)
 {
 	t_data	*tmp;
 
-	if (*stack_a)
+	if (stack_a)
 	{
-		while ((*stack_a)->next)
+		while ((stack_a)->next)
 		{
-			tmp = (*stack_a)->next;
+			tmp = (stack_a)->next;
 			while (tmp)
 			{
-				if ((*stack_a)->value > tmp->value)
+				if ((stack_a)->value > tmp->value)
 					return (-1);
 				tmp = tmp->next;
 			}
-			*stack_a = (*stack_a)->next;
+			stack_a = (stack_a)->next;
 		}
 	}
 	return (0);
