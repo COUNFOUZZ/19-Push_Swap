@@ -12,20 +12,23 @@
 
 #include "../include/push_swap.h"
 
-void	ft_error(t_data *node, int res, const char *error)
+void	ft_error(t_data *stack_a, t_data *stack_b, int res, const char *error)
 {
 	t_data	*tmp;
 
 	if (res < 0)
 	{
-		if (node)
+		while (stack_a)
 		{
-			while (node)
-			{
-				tmp = node;
-				free(node);
-				node = tmp->next;
-			}
+			tmp = stack_a;
+			free(stack_a);
+			stack_a = tmp->next;
+		}
+		while (stack_b)
+		{
+			tmp = stack_b;
+			free(stack_b);
+			stack_b = tmp->next;
 		}
 		write(2, error, ft_strlen(error));
 		exit(EXIT_FAILURE);

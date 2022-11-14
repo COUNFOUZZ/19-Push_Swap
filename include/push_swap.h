@@ -80,6 +80,7 @@ void	ft_if_is_two_args(int argc, const char **argv, t_data **stack);
 void	ft_sort(t_data **stack_a, t_data **stack_b);
 
 /*		UTILS.C		*/
+void	ft_error(t_data *stack_a, t_data *stack_b, int res, const char *error);
 int		ft_len_stack(t_data *stack);
 
 #endif
