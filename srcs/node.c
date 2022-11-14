@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 11:34:10 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/09 02:16:47 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/14 12:08:09 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,21 @@ void	ft_fill_index(t_data **stack_a)
 
 	first = *stack_a;
 	cp_a = *stack_a;
-	if (*stack_a)
+	while (*stack_a)
 	{
-		while (*stack_a)
+		cp_a = first;
+		i = 0;
+		while (cp_a)
 		{
-			cp_a = first;
-			i = 0;
-			while (cp_a)
-			{
-				if ((*stack_a)->value > cp_a->value)
-					i++;
+			if ((*stack_a)->value > cp_a->value)
+				i++;
+			if ((*stack_a)->index != i)
 				(*stack_a)->index = i;
-				if (!cp_a->next)
-					break ;
-				cp_a = cp_a->next;
-			}
-			*stack_a = (*stack_a)->next;
+			if (!cp_a->next)
+				break ;
+			cp_a = cp_a->next;
 		}
+		*stack_a = (*stack_a)->next;
 	}
 	*stack_a = first;
 }
