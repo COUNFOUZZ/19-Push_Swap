@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 21:14:22 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/14 16:55:06 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/17 00:05:01 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,42 @@ int	ft_len_stack(t_data *stack)
 		i++;
 	}
 	return (i);
+}
+
+int	ft_find_min_index(t_data **stack)
+{
+	t_data	*first;
+	int		count;
+
+	first = *stack;
+	count = 0;
+	while (*stack)
+	{
+		if ((*stack)->index == 0)
+			break ;
+		count++;
+		*stack = (*stack)->next;
+	}
+	*stack = first;
+	return (count);
+}
+
+int	ft_find_max_index(t_data **stack)
+{
+	t_data	*first;
+	int		max_index;
+	int		count;
+
+	first = *stack;
+	max_index = ft_len_stack(*stack);
+	count = 0;
+	while (*stack)
+	{
+		if ((*stack)->index == max_index)
+			break ;
+		count++;
+		*stack = (*stack)->next;
+	}
+	*stack = first;
+	return (count);
 }

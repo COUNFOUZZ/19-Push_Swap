@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:04:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/16 16:41:33 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/17 00:05:30 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,7 @@ void	ft_sort(t_data **stack_a, t_data **stack_b);
 void	ft_free_stack(t_data *stack_a, t_data *stack_b);
 void	ft_error(t_data *stack_a, t_data *stack_b, int res, const char *error);
 int		ft_len_stack(t_data *stack);
+int		ft_find_min_index(t_data **stack);
+int		ft_find_max_index(t_data **stack);
 
 #endif
