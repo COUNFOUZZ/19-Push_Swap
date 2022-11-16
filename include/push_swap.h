@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:04:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/14 16:13:06 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/16 13:16:59 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ void	ft_if_is_two_args(int argc, const char **argv, t_data **stack);
 void	ft_sort(t_data **stack_a, t_data **stack_b);
 
 /*		UTILS.C		*/
+void	ft_free_stack(t_data *stack_a, t_data *stack_b);
 void	ft_error(t_data *stack_a, t_data *stack_b, int res, const char *error);
 int		ft_len_stack(t_data *stack);
 
