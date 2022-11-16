@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:04:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/16 13:16:59 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/16 16:41:33 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	ft_reverse_rotate(const char *s, t_data **stack);
 void	rrr(t_data **stack_a, t_data **stack_b);
 
 /*		FT_SORT.C		*/
-void	ft_three_node(t_data **stack_a);
+void	ft_three_nodes(t_data **stack_a);
 void	ft_sort_big_stack(t_data **stack_a, t_data **stack_b);
 void	ft_radix(t_data **stack_a, t_data **stack_b);
 

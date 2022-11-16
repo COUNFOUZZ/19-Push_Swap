@@ -6,13 +6,13 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:15:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/14 16:09:45 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/16 16:41:10 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	ft_three_node(t_data **stack_a)
+void	ft_three_nodes(t_data **stack_a)
 {
 	t_data	*f;
 	t_data	*s;
