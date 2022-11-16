@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:15:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/16 16:41:10 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/17 00:01:33 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,82 @@ void	ft_three_nodes(t_data **stack_a)
 		ft_rotate("ra\n", stack_a);
 		ft_swap("sa\n", stack_a);
 	}
+}
+
+int	ft_find_min_index(t_data **stack)
+{
+	t_data	*first;
+	int		count;
+
+	first = *stack;
+	count = 0;
+	while (*stack)
+	{
+		if ((*stack)->index == 0)
+			break ;
+		count++;
+		*stack = (*stack)->next;
+	}
+	*stack = first;
+	return (count);
+}
+
+int	ft_find_max_index(t_data **stack)
+{
+	t_data	*first;
+	int		max_index;
+	int		count;
+
+	first = *stack;
+	max_index = ft_len_stack(*stack);
+	count = 0;
+	while (*stack)
+	{
+		if ((*stack)->index == max_index)
+			break ;
+		count++;
+		*stack = (*stack)->next;
+	}
+	*stack = first;
+	return (count);
+}
+
+void	ft_five_nodes(t_data **stack_a, t_data **stack_b)
+{
+	int	len_stack_a;
+	int	pos_i_min;
+	int	pos_i_max;
+	int	i;
+
+	len_stack_a = ft_len_stack(*stack_a);
+	pos_i_min = ft_find_min_index(stack_a);
+	i = -1;
+	if (pos_i_min <= len_stack_a / 2)
+		while (++i < pos_i_min)
+			ft_rotate("ra\n", stack_a);
+	else if (pos_i_min > len_stack_a / 2)
+		while (++i < len_stack_a - pos_i_min)
+			ft_reverse_rotate("rra\n", stack_a);
+	pb(stack_a, stack_b);
+	len_stack_a = ft_len_stack(*stack_a);
+	pos_i_max = ft_find_max_index(stack_a);
+	i = -1;
+	if (pos_i_max <= len_stack_a / 2)
+		while (++i < pos_i_max)
+			ft_rotate("ra\n", stack_a);
+	else if (pos_i_max > len_stack_a / 2)
+		while (++i < len_stack_a - pos_i_max)
+			ft_reverse_rotate("rra\n", stack_a);
+	pb(stack_a, stack_b);
+	len_stack_a = ft_len_stack(*stack_a);
+	if (len_stack_a == 2 && (*stack_a)->index > (*stack_a)->next->index)
+		ft_swap("sa\n", stack_a);
+	else if (len_stack_a == 3)
+		ft_three_nodes(stack_a);
+	pa(stack_a, stack_b);
+	ft_rotate("ra\n", stack_a);
+	pa(stack_a, stack_b);
+	ft_print_two_stack(*stack_a, *stack_b);
 }
 
 void	ft_radix(t_data **stack_a, t_data **stack_b)

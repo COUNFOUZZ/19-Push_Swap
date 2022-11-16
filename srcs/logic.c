@@ -37,17 +37,18 @@ void	ft_sort(t_data **stack_a, t_data **stack_b)
 
 	nb_node = 0;
 	cp_a = *stack_a;
+	ft_fill_index(stack_a);
 	while (cp_a)
 	{
 		cp_a = cp_a->next;
 		nb_node++;
 	}
-	if (ft_is_sorted(*stack_a) == 0)
-		return ;
 	if (nb_node == 2 && (*stack_a)->value > (*stack_a)->next->value)
 		ft_swap("sa\n", stack_a);
 	else if (nb_node == 3)
 		ft_three_nodes(stack_a);
+	else if (nb_node > 3 && nb_node < 6)
+		ft_five_nodes(stack_a, stack_b);
 	else if (nb_node > 5)
 		ft_radix(stack_a, stack_b);
 }

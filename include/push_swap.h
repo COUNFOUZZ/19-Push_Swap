@@ -72,6 +72,7 @@ void	rrr(t_data **stack_a, t_data **stack_b);
 
 /*		FT_SORT.C		*/
 void	ft_three_nodes(t_data **stack_a);
+void	ft_five_nodes(t_data **stack_a, t_data **stack_b);
 void	ft_radix(t_data **stack_a, t_data **stack_b);
 
 /*		LOGIC.C		*/
