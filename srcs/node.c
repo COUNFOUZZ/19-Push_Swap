@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 11:34:10 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/14 14:52:11 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/16 22:28:40 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,10 +81,4 @@ void	ft_print_two_stack(t_data *stack_a, t_data *stack_b)
 	}
 	if (!stack_b)
 		printf(RED "[%p]NULL\n" NORMAL, stack_b);
-}
-
-void	ft_sort_big_stack(t_data **stack_a, t_data **stack_b)
-{
-	ft_fill_index(stack_a);
-	ft_radix(stack_a, stack_b);
 }

@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:50:32 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/16 16:40:58 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/16 22:27:47 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ void	ft_sort(t_data **stack_a, t_data **stack_b)
 		ft_swap("sa\n", stack_a);
 	else if (nb_node == 3)
 		ft_three_nodes(stack_a);
-		ft_sort_big_stack(stack_a, stack_b);
+	else if (nb_node > 5)
+		ft_radix(stack_a, stack_b);
 }
