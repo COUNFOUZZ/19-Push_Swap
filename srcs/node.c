@@ -76,7 +76,7 @@ void	ft_print_two_stack(t_data *stack_a, t_data *stack_b)
 	printf(YELLOW "[STACK_B]\n");
 	while (stack_b)
 	{
-		printf("[%p][%d]\n", stack_b, stack_b->value);
+		printf("[%p][%d][%d]\n", stack_b, stack_b->value, stack_b->index);
 		stack_b = stack_b->next;
 	}
 	if (!stack_b)
