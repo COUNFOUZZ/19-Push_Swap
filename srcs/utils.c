@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 21:14:22 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/17 00:05:01 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/17 15:07:24 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void	ft_free_stack(t_data *stack_a, t_data *stack_b)
 	while (stack_a)
 	{
 		tmp = stack_a;
-		free(stack_a);
 		stack_a = tmp->next;
+		free(tmp);
 	}
 	while (stack_b)
 	{
 		tmp = stack_b;
-		free(stack_b);
 		stack_b = tmp->next;
+		free(tmp);
 	}
 }
 
