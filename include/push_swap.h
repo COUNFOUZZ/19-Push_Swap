@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:04:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/17 00:05:30 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/17 10:43:36 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,12 +72,13 @@ void	rrr(t_data **stack_a, t_data **stack_b);
 
 /*		FT_SORT.C		*/
 void	ft_three_nodes(t_data **stack_a);
-void	ft_five_nodes(t_data **stack_a, t_data **stack_b);
+void	ft_four_and_five_nodes(t_data **stack_a, t_data **stack_b);
 void	ft_radix(t_data **stack_a, t_data **stack_b);
 
 /*		LOGIC.C		*/
 void	ft_if_is_two_args(int argc, const char **argv, t_data **stack);
 void	ft_sort(t_data **stack_a, t_data **stack_b);
+void	ft_logic_four_five(t_data **s_a, t_data **s_b, int pos, int len_s_a);
 
 /*		UTILS.C		*/
 void	ft_free_stack(t_data *stack_a, t_data *stack_b);

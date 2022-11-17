@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:50:32 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/16 22:27:47 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/17 10:43:33 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,21 @@ void	ft_sort(t_data **stack_a, t_data **stack_b)
 	else if (nb_node == 3)
 		ft_three_nodes(stack_a);
 	else if (nb_node > 3 && nb_node < 6)
-		ft_five_nodes(stack_a, stack_b);
+		ft_four_and_five_nodes(stack_a, stack_b);
 	else if (nb_node > 5)
 		ft_radix(stack_a, stack_b);
+}
+
+void	ft_logic_four_five(t_data **s_a, t_data **s_b, int pos, int len_s_a)
+{
+	int	i;
+
+	i = -1;
+	if (pos <= len_s_a / 2)
+		while (++i < pos)
+			ft_rotate("ra\n", s_a);
+	else if (pos > len_s_a / 2)
+		while (++i < len_s_a - pos)
+			ft_reverse_rotate("rra\n", s_a);
+	pb(s_a, s_b);
 }
