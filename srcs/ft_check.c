@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:32:08 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/08 17:18:58 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/17 12:10:24 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,7 @@ int	ft_is_sorted(t_data *stack_a)
 			stack_a = (stack_a)->next;
 		}
 	}
+	else
+		return (-1);
 	return (0);
 }
