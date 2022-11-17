@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:15:13 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/17 10:50:43 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/17 15:05:02 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ void	ft_four_and_five_nodes(t_data **stack_a, t_data **stack_b)
 	pa(stack_a, stack_b);
 	ft_rotate("ra\n", stack_a);
 	pa(stack_a, stack_b);
-	ft_print_two_stack(*stack_a, *stack_b);
 }
 
 void	ft_radix(t_data **stack_a, t_data **stack_b)
