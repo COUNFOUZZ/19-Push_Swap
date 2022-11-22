@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:50:32 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/17 15:02:44 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/22 16:18:45 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	ft_if_is_two_args(int argc, const char **argv, t_data **stack)
 	{
 		i = 0;
 		tab = ft_split(argv[1], ' ');
+		if (!tab || !tab[i])
+			ft_error(NULL, NULL, -1, ERROR);
 		while (tab[i])
 			i++;
 		while (--i >= 0)
