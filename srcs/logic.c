@@ -45,6 +45,11 @@ void	ft_sort(t_data **stack_a, t_data **stack_b)
 	nb_node = 0;
 	cp_a = *stack_a;
 	ft_fill_index(stack_a);
+	if (ft_is_sorted(*stack_a) == 0)
+	{
+		ft_free_stack(*stack_a, NULL);
+		exit(EXIT_SUCCESS);
+	}
 	while (cp_a)
 	{
 		cp_a = cp_a->next;
