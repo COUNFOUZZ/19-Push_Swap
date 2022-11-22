@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 11:34:10 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/16 22:28:40 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/22 17:10:15 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,35 +50,4 @@ void	ft_fill_index(t_data **stack_a)
 		*stack_a = (*stack_a)->next;
 	}
 	*stack_a = first;
-}
-
-void	ft_print_list(t_data *node)
-{
-	while (node)
-	{
-		printf("[%p][%d]\n", node, node->value);
-		node = node->next;
-		if (!node)
-			printf("[%p]NULL\n", node);
-	}
-}
-
-void	ft_print_two_stack(t_data *stack_a, t_data *stack_b)
-{
-	printf(GREEN "[STACK_A]\n");
-	while (stack_a)
-	{
-		printf("[%p][%d][%d]\n", stack_a, stack_a->value, stack_a->index);
-		stack_a = stack_a->next;
-	}
-	if (!stack_a)
-		printf(RED "[%p]NULL\n" NORMAL, stack_a);
-	printf(YELLOW "[STACK_B]\n");
-	while (stack_b)
-	{
-		printf("[%p][%d][%d]\n", stack_b, stack_b->value, stack_b->index);
-		stack_b = stack_b->next;
-	}
-	if (!stack_b)
-		printf(RED "[%p]NULL\n" NORMAL, stack_b);
 }
