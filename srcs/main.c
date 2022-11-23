@@ -6,7 +6,7 @@
 /*   By: aabda <aabda@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 23:03:56 by aabda             #+#    #+#             */
-/*   Updated: 2022/11/22 16:09:23 by aabda            ###   ########.fr       */
+/*   Updated: 2022/11/23 14:03:22 by aabda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int argc, const char **argv)
 	stack_a = NULL;
 	stack_b = NULL;
 	if (argc < 2)
-		ft_error(stack_a, stack_b, -1, ERROR);
+		return (0);
 	else if (argc == 2)
 	{
 		ft_if_is_two_args(argc, argv, &stack_a);
